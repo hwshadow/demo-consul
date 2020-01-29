@@ -34,10 +34,10 @@ hashi-demo_consul-server-lb_1
 
 ## FAILOVER
 1. create a key/value entry
-2. docker stop   __random-consul-server____
+2. `docker stop   __random-consul-server____`
 3. wait for leader election
-4. ./DEMOS_FACT_FAILOVER.sh
-5. docker-compose -f hashi.yml up -d
+4. `./DEMOS_FACT_FAILOVER.sh`
+5. `docker-compose -f hashi.yml up -d`
 
 ```
 ~/r/hashi-demo> ./DEMOS_FACT_FAILOVER.sh
