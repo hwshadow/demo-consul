@@ -1,18 +1,18 @@
 Original https://github.com/hashicorp/consul/blob/master/demo/docker-compose-cluster/docker-compose.yml
 Added: LB in-front of the servers, and physically exposed all the servers to localhost
 
-START
+## START
 docker-compose -f hashi.yml up -d
 
-RAW CONSUL SERVER WEB-UI
+## RAW CONSUL SERVER WEB-UI
 - http://localhost:5500
 - http://localhost:6500
 - http://localhost:7500
 
-LOADBALANCED CONSUL SERVER WEB-UI
+## LOADBALANCED CONSUL SERVER WEB-UI
 visit http://localhost:8500
 
-HAPPY
+## HAPPY
 ```
 ~/r/hashi-demo> ./DEMOS_FACT_FAILOVER.sh
 hashi-demo_consul-server-1_1
@@ -32,7 +32,7 @@ hashi-demo_consul-server-lb_1
 --curl(0): /v1/kv/test/new = es
 ```
 
-FAILOVER
+## FAILOVER
 1. create a key/value entry
 2. docker stop   __random-consul-server____
 3. wait for leader election
